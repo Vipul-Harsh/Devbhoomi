@@ -6980,6 +6980,12 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     padding: 10px;
     border-radius: 10px;
 }
+.bt{
+    color: white !important;
+    padding: 10px;
+    border-radius: 10px;
+    display: flow;
+}
 .tt{
     display: inline;
 }
@@ -7046,4 +7052,23 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
   }
+  .pxp-contact-hero-offices{
+    width: 40%;
+    text-align: center;
+  }
+  .mt-30{
+    margin-top:20px ;
+  }
+  .fas{
+    color: black !important;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
   
+.btnes{
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white !important;
+}
