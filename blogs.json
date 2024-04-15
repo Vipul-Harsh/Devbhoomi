@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "What to Expect When Working with an Interior Designer",
+      "category": "Interior Design",
+      "date": "April 9, 2021",
+      "image": "images/newimg/Garden_PH.jpg",
+      "content": "Most designers will tell you that, as much as we all love to watch home design shows, their prevalence has done them a bit of a disservice..."
+    },
+    {
+      "id": 2,
+      "title": "Private Contemporary Home Balancing Openness",
+      "category": "Architecture",
+      "date": "April 9, 2021",
+      "image": "images/newimg/green-park-view.jpg",
+      "content": "Not all designers are created equal. Like all of us, each designer has his or her own unique personal tastes, quirks and business practices..."
+    },
+    {
+      "id": 3,
+      "title": "Stylish Modern Ranch Exuding a Welcoming Feel",
+      "category": "Interior Design",
+      "date": "April 9, 2021",
+      "image": "images/newimg/hotel-pool-with-mosaictiled-bottom-swimup-bar-serving-refreshing-beverages.jpg",
+      "content": "For those who have never hired an interior designer before, the idea of doing so can feel out of reach, but it doesn’t need to be..."
+    }
+  ]
+  

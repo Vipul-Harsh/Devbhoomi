@@ -378,7 +378,7 @@ h1.pxp-page-header {
 .pxp-header.pxp-is-sticky {
     background-color: #CD9C3C;
     color: white !important;
-    padding: 20px 0;
+    padding: 6px 0;
     box-shadow: 0px 15px 30px rgba(0,0,0,0.16);
 }
 .pxp-header.pxp-is-sticky.pxp-no-bg {
@@ -5104,7 +5104,7 @@ fieldset[disabled] .checkbox.custom-checkbox input:checked+span {
     background-color: #F7F7F7;
 }
 .pxp-services-accordion-right-container {
-    padding: 80px 100px;
+    padding: 80px 40px;
 }
 .pxp-dark-mode .pxp-services-accordion-right {
     background-color: #000000;
@@ -5757,6 +5757,7 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 
 .pxp-footer {
     background-color: #F7F7F7;
+    padding: 30px;
 }
 .pxp-dark-mode .pxp-footer {
     background-color: #000;
@@ -6457,9 +6458,7 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     .pxp-header-nav-trigger.pxp-active {
         right: calc((100% - 540px) / 2 + 15px);
     }
-    .pxp-nav > li {
-        padding-left: calc((100% - 540px) / 2 + 15px);
-    }
+   
     .pxp-hero-props-carousel-2-left {
         -webkit-flex: 2;
         -ms-flex: 2;
@@ -6973,8 +6972,9 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 }
 .btne{
     background-color: #1a5541;
-    border-radius: 10px;
-    
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: white !important;
 }
 .btn{
