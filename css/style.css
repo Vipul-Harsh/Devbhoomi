@@ -5103,7 +5103,7 @@ fieldset[disabled] .checkbox.custom-checkbox input:checked+span {
     background-color: #F7F7F7;
 }
 .pxp-services-accordion-right-container {
-    padding: 160px 100px;
+    padding: 80px 100px;
 }
 .pxp-dark-mode .pxp-services-accordion-right {
     background-color: #000000;
@@ -6945,4 +6945,45 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     .pxp-hero.pxp-hero-contact {
         height: auto !important;
     }
+}
+.text{
+    text-align: center;
+    z-index: 100;
+}
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+.overlay-content {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the overlay */
+}
+.btne{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: black !important;
+}
+.btn{
+   color: black !important;
+    padding: 10px;
+    border-radius: 10px;
+}
+.tt{
+    display: inline;
+}
+
+
+.fa{
+    font-size: 13px;
+    font-weight: 400;
 }
