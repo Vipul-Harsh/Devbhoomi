@@ -7088,3 +7088,9 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 .major{
     color: #1a5541 ;
 }
+@media (max-width: 850px) {
+    .pxp-contact-hero-offices {
+      width: 100%;
+    }
+  }
+  
