@@ -633,6 +633,10 @@ h1.pxp-page-header {
 .pxp-mobile .pxp-header-nav-trigger {
     border: 1px solid #333;
     color: #333;
+    background-color: black;
+}
+.pxp-mobile:focus{
+    background-color: transparent;
 }
 .pxp-no-bg .pxp-header-user, 
 .pxp-no-bg .pxp-header-nav-trigger {
@@ -6041,9 +6045,16 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     }
     .pxp-header-nav-trigger.pxp-active {
         position: fixed;
-        top: 30px;
+        top: 52px;
         right: calc((100% - 720px) / 2 + 15px);
         z-index: 1050;
+        
+    }
+    .pxp-header-nav-trigger.pxp-active:focus{
+        background-color: white;
+    }
+    .pxp-header-nav-trigger:focus{
+        background-color: transparent;
     }
     .pxp-is-sticky .pxp-header-nav-trigger.pxp-active {
         top: 20px;
@@ -6080,7 +6091,7 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     .pxp-nav > li > a {
         text-transform: none;
         display: inline-block;
-        font-size: 2.3rem;
+        font-size: 1.3rem;
     }
     .pxp-dark-mode .pxp-nav > li > a {
         color: #fff;
@@ -7103,3 +7114,20 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: white !important;
 }
+.hamburger-menu {
+    width: 30px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 3px; /* Adjust thickness as needed */
+    background-color: white; /* Adjust color as needed */
+  }
+  .mob{
+    color: black !important;
+  }

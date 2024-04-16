@@ -3,13 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
         <link rel="shortcut icon" href="/images/newimg/devbhoomilogo2.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css?lokas">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <meta name="Devbhoomi" content="Devbhoomi">
+<style>
+    /* Set the size of the map container */
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
         <title>Devbhoomi</title>
     </head>
     <body>
@@ -88,7 +97,11 @@
           
                 <div class="hund text-right col-6 d-md-none">
                   <a href="javascript:void(0);" class="pxp-header-nav-trigger">
-                    <span class="fa fa-bars" style="color: black;"></span>
+                    <div class="hamburger-menu">
+                        <div class="bar" style="color: black; background-color: black;"></div>
+                        <div class="bar" style="color: black; background-color: black;"></div>
+                        <div class="bar" style="color: black; background-color: black;"></div>
+                      </div>
                   </a>
                 </div>
           
@@ -174,7 +187,7 @@
                                     <h2>Nanital Highway</h2>
                                     <div class="address mt-40">
                                         <h5>Address</h5>
-                                        <p>Natital Highway, Opposite Radisson Blu Hotel,<br/>Rudrapur India 263153</p>
+                                        <p>Nanital Highway, Opposite Radisson Blu Hotel,<br/>Rudrapur India 263153</p>
                                     </div>
                                     <div class="phone mt-30">
                                         <h5>Contact Number</h5>
@@ -240,8 +253,14 @@
                                 </div>
                                 
                             </div>
-                            <div id="pxp-contact-map" class="mt-3">
-                               
+                            <div id="pxp-contact-map map" class="mt-3">
+                                <iframe
+        id="map"
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=79.4211,29.3707,79.5066,29.4089&layer=mapnik">
+    </iframe>
                             </div>
                             
                         </div>
@@ -274,6 +293,7 @@
                         <li><a href="index.html">Features</a></li>
                         <li><a href="index.html">Blog</a></li>
                         <li><a href="index.html">Amenities</a></li>
+                        <li><a href="index.html">Video</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                       </ul>
                     </div>
@@ -290,9 +310,10 @@
                   <a href="#">Privacy Policy</a>
                 </div>
                 <div class="pxp-footer-social">
-                  <a href="https://www.instagram.com/devbhoomigardenestate/?hl=en"><span class="fa fa-instagram"></span></a>
-                  <a href="https://www.linkedin.com/company/101681065/admin/feed/posts/"><span class="fa fa-linkedin-square"></span></a>
-                  <a href="#"><span class="fa fa-twitter"></span></a>
+                  <a href="https://www.instagram.com/devbhoomigardenestate/?hl=en"><span><i class="fab fa-instagram"></i>
+                  </span></a>
+                  <a href="https://www.linkedin.com/company/101681065/admin/feed/posts/"><span ><i class="fab fa-linkedin-square"></i></span></a>
+                  <a href="#"><span "><i class="fab fa-twitter"></i></span></a>
                 </div>
                
               </div>
@@ -381,7 +402,21 @@
                 </div>
             </div>
         </div>
-
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            // Initialize the map
+            var map = L.map('map').setView([29.3805, 79.4630], 13);
+    
+            // Add the OpenStreetMap tiles as a base layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+    
+            // Add a marker at Nainital
+            L.marker([29.3805, 79.4630]).addTo(map)
+                .bindPopup('Nainital')
+                .openPopup();
+        </script>
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
