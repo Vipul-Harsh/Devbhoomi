@@ -631,10 +631,23 @@ h1.pxp-page-header {
 .pxp-is-sticky .pxp-header-user, 
 .pxp-is-sticky .pxp-header-nav-trigger,
 .pxp-mobile .pxp-header-nav-trigger {
-    border: 1px solid #333;
+   
     color: #333;
-    background-color: black;
+    background-color:transparent;
 }
+.pxp-is-sticky .pxp-header-nav-trigger,
+.pxp-mobile .bar{
+    background-color: black;
+    
+}
+.pxp-is-sticky .pxp-header-nav-trigger{
+    background-color: #CD9C3C !important;
+    border: none;
+}
+.pxp-is-sticky .bars{
+    
+}
+
 .pxp-mobile:focus{
     background-color: transparent;
 }
@@ -6057,7 +6070,7 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
         background-color: transparent;
     }
     .pxp-is-sticky .pxp-header-nav-trigger.pxp-active {
-        top: 20px;
+        top:44px;
     }
     .pxp-header.pxp-full .pxp-header-nav-trigger.pxp-active {
         right: 30px;
@@ -7130,4 +7143,8 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
   }
   .mob{
     color: black !important;
+  }
+  .bars{
+    width: 100%;
+    height: 3px;
   }
