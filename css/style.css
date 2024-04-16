@@ -50,7 +50,10 @@ Author URI: http://mariusn.com/
 /**
  * 1.0 - General
  */
+*{
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
+}
 body {
     font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     color: #333;
@@ -378,7 +381,7 @@ h1.pxp-page-header {
 .pxp-header.pxp-is-sticky {
     background-color: #1a5541;
     color: white !important;
-    padding: 6px 0;
+    padding: 0px 0;
     box-shadow: 0px 15px 30px rgba(0,0,0,0.16);
 }
 .pxp-header.pxp-is-sticky.pxp-no-bg {
