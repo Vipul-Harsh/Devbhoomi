@@ -376,7 +376,7 @@ h1.pxp-page-header {
     border-bottom: 1px solid #000;
 }
 .pxp-header.pxp-is-sticky {
-    background-color: #CD9C3C;
+    background-color: #1a5541;
     color: white !important;
     padding: 6px 0;
     box-shadow: 0px 15px 30px rgba(0,0,0,0.16);
@@ -520,7 +520,7 @@ h1.pxp-page-header {
     color:  black !important;
 }
 .pxp-is-sticky .pxp-nav > li > a{
-    color: white !important; 
+    color: white !important;
 }
 .pxp-no-bg .pxp-nav > li > a,
 .pxp-no-bg .pxp-nav > li > a:hover {
@@ -5246,7 +5246,7 @@ fieldset[disabled] .checkbox.custom-checkbox input:checked+span {
     font-weight: 900;
     letter-spacing: -2px;
     line-height: 1;
-    color: #A76C26;
+    color: #CD9C3C;
 }
 .pxp-numbers-item-title {
     font-weight: 700;
@@ -6974,7 +6974,7 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     z-index: 1; /* Ensure content appears above the overlay */
 }
 .btne{
-    background-color: #1a5541;
+    background-color: #CD9C3C;
     border-radius: 8px;
     padding: 10px;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -7096,4 +7096,10 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
       width: 100%;
     }
   }
-  
+.btnee{
+    background-color: #CD9C3C;
+    border-radius: 8px;
+    border: none;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white !important;
+}
