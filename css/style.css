@@ -779,7 +779,7 @@ button{
 .pxp-hero-props-carousel-1 .pxp-hero-bg:after {
     content: " ";
     display: block;
-    background-color: rgba(0,0,0,-0.8);
+    background-color: rgba(0,0,0,0.17);
     position: absolute;
     top: 0;
     left: 0;
