@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <link rel="shortcut icon" href="/images/newimg/devbhoomilogo2.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css?lokas">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<meta name="Devbhoomi" content="Devbhoomi">
+<style>
+    /* Set the size of the map container */
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+        <title>Devbhoomi</title>
+    </head>
+    <body>
+        <!-- <div class="pxp-header fixed-top pxp-animate pxp-no-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-5 col-md-2">
+                        <a href="index.html" class="pxp-logo text-decoration-none">resideo.</a>
+                    </div>
+                    <div class="col-2 col-md-8 text-center">
+                        <ul class="pxp-nav list-inline">
+                            <li class="list-inline-item">
+                                <a href="#">Home</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="index.html">Version 1</a></li>
+                                    <li><a href="index-2.html">Version 2</a></li>
+                                    <li><a href="index-3.html">Version 3</a></li>
+                                    <li><a href="index-4.html">Version 4</a></li>
+                                    <li><a href="index-5.html">Version 5</a></li>
+                                    <li><a href="index-6.html">Version 6</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Properties</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="properties.html">All Properties</a></li>
+                                    <li><a href="single-property.html">Single Property</a></li>
+                                    <li><a href="submit-property.html">Submit New Property</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Agents</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="agents.html">All Agents</a></li>
+                                    <li><a href="single-agent.html">Single Agent</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Blog</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="blog.html">All Blog Posts</a></li>
+                                    <li><a href="single-post.html">Single Blog Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Themes</a>
+                                <ul class="pxp-nav-sub rounded-lg">
+                                    <li><a href="../light/contact.html">Light</a></li>
+                                    <li><a href="../dark/contact.html">Dark</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item pxp-is-last"><a href="contact.html">Contact Us</a></li>
+                            <li class="list-inline-item pxp-has-btns">
+                                <div class="pxp-user-btns">
+                                    <a href="#" class="pxp-user-btns-signup pxp-signup-trigger">Sign Up</a>
+                                    <a href="#" class="pxp-user-btns-login pxp-signin-trigger">Sign In</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-5 col-md-2 text-right">
+                        <a href="javascript:void(0);" class="pxp-header-nav-trigger"><span class="fa fa-bars"></span></a>
+                        <a href="javascript:void(0);" class="pxp-header-user pxp-signin-trigger"><span class="fa fa-user-o"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="pxp-header fixed-top pxp-animate">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-2 col-6">
+                  <a href="index.html" class="pxp-logo text-decoration-none tt">
+                    <img src="/images/newimg/devbhoomilogo3 1.png" />
+                  </a>
+                </div>
+          
+                <div class="hund text-right col-6 d-md-none">
+                  <a href="javascript:void(0);" class="pxp-header-nav-trigger">
+                    <div class="hamburger-menu">
+                        <div class="bari" style="color: black; background-color: black; height: 2px;"></div>
+                        <div class="bari" style="color: black; background-color: black; height: 2px;"></div>
+                        <div class="bari" style="color: black; background-color: black; height: 2px;"></div>
+                      </div>
+                      <div class="close-menu" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                  </a>
+                </div>
+          
+                <div class="col-md-8 text-center pxp-nav-mobile d-md-none">
+                  <ul class="pxp-nav list-inline">
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">Home</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">About Us</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">Features</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">Amenities</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">Tour</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">Blogs</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="mob" style="color: black !important;;">Socials</a>
+                    </li>
+                    <li class="list-inline-item" style="display: flex; justify-content: center;color: white;">
+                        <a class="btne d-block mt-3 " style="font-size: 1.3rem; width: 25%; display: flex; justify-content: center; color: white;" href="contact.html">Contact Us</a>
+                    </li>
+                   
+                  </ul>
+                 
+                </div>
+          
+                <div class="col-md-8 text-center d-none d-md-block" >
+                  <ul class="pxp-nav list-inline" style="display: flex; justify-content: center; align-items: center; gap: 25px;">
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">Home</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">About Us</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">Features</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">Amenities</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">Tour</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">Blogs</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="index.html" class="fas">Socials</a>
+                    </li>
+                  </ul>
+                </div>
+          
+                <div class="col-md-2 text-right d-none d-md-block">
+                  <a class="btne" href="contact.html">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pxp-content">
+            <div class="pxp-contact pxp-content-wrapper  mb-40 " style="padding: 50px; margin-top: 150px;">
+            <div itemscope itemtype="http://schema.org/Article">
+                <h1 itemprop="headline" class="major">Terms and Conditions</h1>
+                <div itemprop="articleBody">
+                    <p>Welcome to Devbhoomi Garden Estates. These terms and conditions outline the rules and regulations for the use of our website.</p>
+                    <p>By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use Devbhoomi Garden Estates' website if you do not accept all of the terms and conditions stated on this page.</p>
+                    <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all Agreements: "Client", "You" and "Your" refers to you, the person accessing this website and accepting the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves, or either the Client or ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner, whether by formal meetings of a fixed duration, or any other means, for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services/products, in accordance with and subject to, prevailing law of India.</p>
+                    <h2 class="major">License</h2>
+                    <p>Unless otherwise stated, Devbhoomi Garden Estates and/or its licensors own the intellectual property rights for all material on Devbhoomi Garden Estates. All intellectual property rights are reserved. You may access this from Devbhoomi Garden Estates for your own personal use subjected to restrictions set in these terms and conditions.</p>
+                    <p>You must not:</p>
+                    <ul>
+                        <li>Republish material from Devbhoomi Garden Estates</li>
+                        <li>Sell, rent or sub-license material from Devbhoomi Garden Estates</li>
+                        <li>Reproduce, duplicate or copy material from Devbhoomi Garden Estates</li>
+                        <li>Redistribute content from Devbhoomi Garden Estates</li>
+                    </ul>
+                    <h2 class="major">Hyperlinking to our Content</h2>
+                    <p>The following organizations may link to our Website without prior written approval:</p>
+                    <ul>
+                        <li>Government agencies</li>
+                        <li>Search engines</li>
+                        <li>News organizations</li>
+                        <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+                        <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+                    </ul>
+                    <!-- Add more terms and conditions content as needed -->
+                </div>
+                <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                       
+                        <meta itemprop="url" content="/images/newimg/devbhoomilogo2.png">
+                        <meta itemprop="width" content="600">
+                        <meta itemprop="height" content="60">
+                    </div>
+                    <meta itemprop="name" content="Devbhoomi Garden Estates">
+                </div>
+                <meta itemprop="datePublished" content="2024-04-20">
+                <meta itemprop="dateModified" content="2024-04-20">
+            </div>
+        </div>
+        </div>
+        
+        <div class="pxp-footer ">
+            <div class="container">
+              <div class="rows">
+                <div class="col-sm-12 col-lg-4">
+                  <div class="pxp-footer-logo mb-40">
+                    <img src="images/newimg/Big Logo.png" alt="Logo" /></div>
+                  
+                    <div class="text-black" style="font-family: Dinh;">
+      
+                      Experience Gardenestate: Where modern living meets natural harmony.
+                    </div>
+                    <div class="pxp-footer-address mt-2" style="font-family: Dinh;">
+      
+                    Rudrapur, Kalyanpur, Uttarakhand 263153
+                  </div>
+                 
+                </div>
+                <div class="col-sm-12 col-lg-8">
+                  <div class="rows">
+                    <div >
+                      <ul class="list-unstyled pxp-footer-links pxp-footer-quick-links">
+                        <li><a href="index.html" class="fas">About Us</a></li>
+                        <li><a href="index.html" class="fas">Features</a></li>
+                        <li><a href="index.html" class="fas">Blog</a></li>
+                        <li><a href="index.html" class="fas">Amenities</a></li>
+                        <li><a href="index.html" class="fas">Video</a></li>
+                        <li><a href="contact.html" class="fas">Contact Us</a></li>
+                      </ul>
+                    </div>
+                    
+                   
+                    
+                  </div>
+                </div>
+              </div>
+      <hr/>
+              <div class="pxp-footer-bottom mt-2 d-flex justify-content-between align-items-center">
+                <div>
+                  <a href="#">Terms & Conditions</a> and
+                  <a href="#">Privacy Policy</a>
+                </div>
+                <div class="pxp-footer-social">
+                  <a href="https://www.instagram.com/devbhoomigardenestate/?hl=en"><span><i class="fab fa-instagram"></i>
+                  </span></a>
+                  <a href="https://www.linkedin.com/company/101681065/admin/feed/posts/"><span ><i class="fab fa-linkedin-square"></i></span></a>
+                  <a href="#"><span "><i class="fab fa-facebook"></i></span></a>
+                </div>
+               
+              </div>
+              <hr/>
+              <div class="pxp-footer-copyright" style="font-family: Dinh;">
+                &copy; Gardenestate. All Rights Reserved. 2024
+              </div>
+            </div>
+          </div>
+
+        <div class="modal fade" id="pxp-signin-modal" tabindex="-1" role="dialog" aria-labelledby="pxpSigninModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="pxpSigninModal">Welcome back!</h5>
+                        <form class="mt-4">
+                            <div class="form-group">
+                                <label for="pxp-signin-email">Email</label>
+                                <input type="text" class="form-control" id="pxp-signin-email" placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="pxp-signin-pass">Password</label>
+                                <input type="password" class="form-control" id="pxp-signin-pass" placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <a href="#" class="pxp-agent-contact-modal-btn">Sign In</a>
+                            </div>
+                            <div class="form-group mt-4 text-center pxp-modal-small">
+                                <a href="#" class="pxp-modal-link">Forgot password</a>
+                            </div>
+                            <div class="text-center pxp-modal-small">
+                                New to Resideo? <a href="javascript:void(0);" class="pxp-modal-link pxp-signup-trigger">Create an account</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pxp-signup-modal" tabindex="-1" role="dialog" aria-labelledby="pxpSignupModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="pxpSignupModal">Create an account</h5>
+                        <form class="mt-4">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="pxp-signup-firstname">First Name</label>
+                                        <input type="text" class="form-control" id="pxp-signup-firstname" placeholder="Enter first name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="pxp-signup-lastname">Last Name</label>
+                                        <input type="text" class="form-control" id="pxp-signup-lastname" placeholder="Enter last name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pxp-signup-email">Email</label>
+                                <input type="text" class="form-control" id="pxp-signup-email" placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="pxp-signup-pass">Password</label>
+                                <input type="password" class="form-control" id="pxp-signup-pass" placeholder="Create a password">
+                            </div>
+                            <div class="form-group">
+                                <a href="#" class="pxp-agent-contact-modal-btn">Sign Up</a>
+                            </div>
+                            <div class="text-center mt-4 pxp-modal-small">
+                                Already have an account? <a href="javascript:void(0);" class="pxp-modal-link pxp-signin-trigger">Sign in</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            // Initialize the map
+            var map = L.map('map').setView([29.3805, 79.4630], 13);
+    
+            // Add the OpenStreetMap tiles as a base layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+    
+            // Add a marker at Nainital
+            L.marker([29.3805, 79.4630]).addTo(map)
+                .bindPopup('Nainital')
+                .openPopup();
+        </script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY_HERE&amp;libraries=geometry&amp;libraries=places"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/contact-map.js?assasd"></script>
+        <script src="js/main.js?kasjdk"></script>
+        <script>
+            function callPhoneNumber(phoneNumber) {
+                window.location.href = 'tel:' + phoneNumber;
+            }
+        </script>
+        <script>
+            function toggleMenu() {
+    var hamburgerMenu = document.querySelector('.hamburger-menu');
+    var closeMenu = document.querySelector('.close-menu');
+
+    if (hamburgerMenu.style.display !== 'none') {
+        hamburgerMenu.style.display = 'none';
+        closeMenu.style.display = 'block';
+    } else {
+        hamburgerMenu.style.display = 'block';
+        closeMenu.style.display = 'none';
+    }
+}
+
+        </script>
+    </body>
+</html>

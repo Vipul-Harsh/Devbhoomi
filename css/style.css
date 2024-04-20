@@ -50,6 +50,18 @@ Author URI: http://mariusn.com/
 /**
  * 1.0 - General
  */
+ @font-face {
+    font-family: DIN;
+    src: url(/fonts/DIN\ Medium.ttf);
+ }
+ @font-face {
+    font-family: Gallient;
+    src: url(/fonts/Gallient.ttf);
+ }
+ @font-face {
+    font-family: Dinh;
+    src: url(/fonts/DINNextLTPro-Heavy.otf) format('opentype');
+ }
 *{
     font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
@@ -498,9 +510,9 @@ h1.pxp-page-header {
     color: #fff;
     text-decoration: none;
 }
-.pxp-nav > li > a {
+/* .pxp-nav > li > a {
     text-transform: uppercase;
-}
+} */
 .pxp-nav > li > a:after {
     content: " ";
     display: block;
@@ -524,6 +536,10 @@ h1.pxp-page-header {
 }
 .pxp-is-sticky .pxp-nav > li > a{
     color: white !important;
+}
+button{
+    border: none;
+    outline: none;
 }
 .pxp-no-bg .pxp-nav > li > a,
 .pxp-no-bg .pxp-nav > li > a:hover {
@@ -614,7 +630,7 @@ h1.pxp-page-header {
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    border: 1px solid #fff;
+   
     border-radius: 50%;
     display: inline-block;
     font-size: .8rem;
@@ -629,7 +645,7 @@ h1.pxp-page-header {
 .pxp-header-nav-trigger:hover {
     text-decoration: none;
     color: #333;
-    background-color: #fff;
+    
 }
 .pxp-is-sticky .pxp-header-user, 
 .pxp-is-sticky .pxp-header-nav-trigger,
@@ -643,12 +659,15 @@ h1.pxp-page-header {
     background-color: black;
     
 }
+.pxp-is-sticky .pxp-header-nav-trigger .bari{
+    background-color: black !important;
+}
 .pxp-is-sticky .pxp-header-nav-trigger{
-    background-color: #CD9C3C !important;
+    background-color: transparent !important;
     border: none;
 }
-.pxp-is-sticky .bars{
-    
+.pxp-is-sticky .bari{
+    background-color: white !important;
 }
 
 .pxp-mobile:focus{
@@ -668,7 +687,7 @@ h1.pxp-page-header {
 .pxp-is-sticky .pxp-header-nav-trigger:hover,
 .pxp-mobile .pxp-header-nav-trigger:hover {
     color: #fff;
-    background-color: #333;
+    
 }
 .pxp-no-bg .pxp-header-user:hover, 
 .pxp-no-bg .pxp-header-nav-trigger:hover {
@@ -760,7 +779,7 @@ h1.pxp-page-header {
 .pxp-hero-props-carousel-1 .pxp-hero-bg:after {
     content: " ";
     display: block;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,-0.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -996,6 +1015,7 @@ h1.pxp-page-header {
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    font-family: DIN;
 }
 .pxp-hero-props-carousel-1-prices.pxp-price-active .carousel-item.active .pxp-price > span {
     transform: translateY(0);
@@ -1082,7 +1102,7 @@ h1.pxp-page-header {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(255,255,255,0.1);
+    /* background-color: rgba(255,255,255,0.1); */
     transform: scale(0, 1);
     transform-origin: 0% 50%;
     -webkit-transition: all 6.4s linear;
@@ -1101,14 +1121,14 @@ h1.pxp-page-header {
     bottom: 0;
     right: 0;
     z-index: 2;
-    background-color: #fff;
+    background-color:transparent;
     width: 240px;
     height: 120px;
 }
 .pxp-hero-props-carousel-1 .pxp-carousel-controls a {
     cursor: pointer;
     display: block;
-    background-color: #fff;
+    background-color:transparent;
     height: 120px;
     width: 120px;
     position: absolute;
@@ -1209,6 +1229,7 @@ h1.pxp-page-header {
     transform: translateY(20px);
     -webkit-transition: all .6s ease-in-out;
     -moz-transition: all .6s ease-in-out;
+  font-family: DIN; 
     transition: all .6s ease-in-out;
 }
 .pxp-hero-props-carousel-1 .carousel-item.active .pxp-caption-prop-title {
@@ -1236,7 +1257,7 @@ h1.pxp-page-header {
 .pxp-hero-props-carousel-1 .carousel-indicators {
     -ms-flex-pack: left;
     justify-content: left;
-    bottom: 180px;
+    bottom: 100px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -2732,7 +2753,7 @@ a.pxp-areas-carousel-item:hover .pxp-areas-carousel-item-fig {
     position: relative;
     overflow: hidden;
     border-radius: .3rem;
-    height: 340px;
+    height: 380px;
     box-shadow: 0px 15px 30px rgba(0,0,0,0.10);
 }
 .pxp-dark-mode .pxp-testim-1-item {
@@ -7004,13 +7025,16 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     background-color: #CD9C3C;
     border-radius: 8px;
     padding: 10px;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Gallient;
     color: white !important;
+    letter-spacing: 4px;
+    
 }
 .btn{
    color: white !important;
     padding: 10px;
     border-radius: 10px;
+    font-size: 10px;
 }
 .btnr{
     color: #1a5541 !important;
@@ -7035,9 +7059,11 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 
 
 .fa{
+    text-decoration: none !important;
     font-size: 16px;
     font-weight: 400;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family:Gallient;
+    letter-spacing: 4px;
 }
 .nv{
     width: 100%;
@@ -7093,7 +7119,7 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the transparency here */
   }
   .pxp-contact-hero-offices{
     width: 40%;
@@ -7103,10 +7129,11 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
     margin-top:20px ;
   }
   .fas{
+
     color: black !important;
     font-size: 16px;
     font-weight: 400;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Gallient;
 }
   
 .btnes{
@@ -7117,6 +7144,10 @@ a.pxp-services-tabs-content-item:hover .pxp-services-tabs-content-item-cta {
 }
 .major{
     color: #1a5541 ;
+    font-family: Dinh;
+}
+p{
+    font-family: DIN;
 }
 @media (max-width: 850px) {
     .pxp-contact-hero-offices {
